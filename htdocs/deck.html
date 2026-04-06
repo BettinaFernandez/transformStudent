@@ -12,14 +12,23 @@
 			* {
 				box-sizing: border-box;
 			}
+
+			div {
+				transition: all 0.5s ease-in-out;
+				
+			}
 			#deck{
+				position: relative;
 				width: 50vw;
-				height: 50vh;
+				height: 75vh;
 				margin: 0 auto 110px;
 				border: 3px solid black;
 				padding: 40px;
 			}
 			#deck div{
+				position: absolute;
+				left: 300px;
+				top: 175px;
 				border: 3px solid black;
 				height: 30vh;
 				width: 20vw;
@@ -28,24 +37,42 @@
 				font-size: 2em;
 				padding: 5px;
 				font-weight: bold;
+
 			}
-			#deck div:hover{
+			#deck:hover div{
 				border: 3px solid yellow;
+				transform-origin: bottom left;
+
 			}
-			#deck div:first-child:hover{
+			#deck:hover div:first-child{
 				background-color: yellow;
+
+				transform: rotate(-35deg);/* Standard syntax */
+				z-index: 1;
+				transition: all 0.5s ease-in-out
+		
 			}
-			#deck div:nth-child(2):hover{
+			#deck:hover div:nth-child(2){
 				background-color: orange;
+				transform: rotate(-25deg);/* Standard syntax */
+				z-index: 2;
+				transition: all 0.5s ease-in-out
 			}
-			#deck div:nth-child(3):hover{
+			#deck:hover div:nth-child(3){
 				background-color: green;
+				transform: rotate(-15deg);/* Standard syntax */
+				z-index: 3;
+				transition: all 0.5s ease-in-out
 			}
-			#deck div:nth-child(4):hover{
+			#deck:hover div:nth-child(4){
 				background-color: blue;
+				z-index: 4;
 			}
-			#deck div:nth-child(5):hover{
+			#deck:hover div:nth-child(5){
 				background-color: violet;
+				transform: rotate(15deg);
+				z-index: 5;
+				transition: all 0.5s ease-in-out
 			}
 			a {
 				text-decoration: none;
@@ -56,16 +83,19 @@
 				padding: 5px;
 				margin: 10px auto;
 			}
+			.apple:hover {
+				display: none;
+			}
 		</style>
 	</head>
 	<body>
 		<div id="deck">
-			<div> &#9824;</div>
-			<div> &#127808;</div>
-			<div>	&#9670;</div>
-			<div>	&#10084;</div>
-      <div> &#127183;</div>
+			<div >🦑</div>
+			<div > 🤷</div>
+			<div >	🍁</div>
+			<div >	😊</div>
+      <div > 🤰</div>
 		</div>
-    <a href="../index.html"><button> Click me for Home</button> </a>
+    <a href=""><button class="apple"> Click me for Home</button> </a>
 	</body>
 </html>
